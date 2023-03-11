@@ -13,6 +13,7 @@ public class Activity2 extends AppCompatActivity {
     private TextView resu;
     private EditText valor2;
     private String valor1;
+    private String resMandar;
     private int elputoprimernumerodemierda;
     private int elputosegundonumerodemierda;
 
@@ -33,6 +34,12 @@ public class Activity2 extends AppCompatActivity {
         elputosegundonumerodemierda = Integer.parseInt(String.valueOf(valor2.getText()));
         int res = elputosegundonumerodemierda+elputoprimernumerodemierda;
         Log.d("123", "suma2: " + res);
-        resu.setText(String.valueOf(res));
+        //resu.setText(String.valueOf(res));
+        resMandar = String.valueOf(res);
+        Log.d("resMandar","= " + resMandar);
+        Intent resultadoIntent = new Intent();
+        resultadoIntent.putExtra("Valor", resMandar);
+        setResult(RESULT_OK, resultadoIntent); //Duda Jordi
+        finish(); // termina esta actividad (la llamada)
     }
 }
