@@ -43,4 +43,10 @@ public class MainActivity extends AppCompatActivity {
         } // ()
 
     }
+    public void compartir (View quien){
+        Intent enviar = new Intent(Intent.ACTION_SEND);
+        enviar.setType("text/plain");
+        enviar.putExtra(Intent.EXTRA_TEXT, respuestaFinal);
+        startActivity(Intent.createChooser(enviar, "Compartir resultado con:"));
+    }
 }
