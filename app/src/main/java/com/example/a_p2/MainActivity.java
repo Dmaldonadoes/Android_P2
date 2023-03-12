@@ -26,11 +26,17 @@ public class MainActivity extends AppCompatActivity {
         super.startActivity(intencion);
     }
 
-    public void sumar(View quien) {
-        Intent sumar1 = new Intent(this, Activity2.class);
+    public void sumar1(View quien) {
+        Intent sumar1 = new Intent("actividad2");
         sumar1.putExtra("val1", String.valueOf(valor1.getText()));
         this.startActivityForResult(sumar1, 1234);
 
+    }
+
+    public void sumar2(View quien) {
+        Intent sumar1 = new Intent(this, Activity2.class);
+        sumar1.putExtra("val1", String.valueOf(valor1.getText()));
+        this.startActivityForResult(sumar1, 1234);
     }
 
     @Override

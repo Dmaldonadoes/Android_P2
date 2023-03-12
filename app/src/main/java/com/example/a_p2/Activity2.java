@@ -30,7 +30,7 @@ public class Activity2 extends AppCompatActivity {
         resu = (TextView) findViewById(R.id.resultado);
 
     }
-    public void suma2 (View quien){
+    public void suma12 (View quien){
         elputosegundonumerodemierda = Integer.parseInt(String.valueOf(valor2.getText()));
         int res = elputosegundonumerodemierda+elputoprimernumerodemierda;
         Log.d("123", "suma2: " + res);
@@ -42,4 +42,5 @@ public class Activity2 extends AppCompatActivity {
         setResult(RESULT_OK, resultadoIntent); //Duda Jordi
         finish(); // termina esta actividad (la llamada)
     }
+
 }
